@@ -1,6 +1,21 @@
 const Model = require('../model');
 const { Manufacturer } = Model;
 
+// ES6提供了语法糖让代码简洁    
+/** 
+ * {
+  getName: function() { return "Luke" },
+  getAge: function() {return 24 }
+}
+
+等同于
+
+{
+  getName() { return "Luke" },
+  getAge() {return 24 }
+}
+
+*/
 const manufacturerController = {
   all(req, res) {
     Manufacturer.find({})
